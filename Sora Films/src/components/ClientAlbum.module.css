@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300;1,18..144,300&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: "Merriweather", serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+
+.maincard {
+  background-color: #000;
+  padding: 60px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.heading {
+  color: #fff;
+  letter-spacing: 5px;
+  padding: 40px 20px;
+  font-size: 60px;
+  margin-bottom: 40px;
+  font-weight: 200;
+  text-align: center;
+}
+
+
+.Album {
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin-bottom: 50px;
+  width: 100%;
+  max-width: 900px;
+}
+
+
+.Album img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.6s ease-out;
+}
+
+.Album:hover img {
+  transform: scale(1.08);
+}
+
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  opacity: 0;
+  transition: 0.3s ease;
+
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.Album:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  text-align: center;
+  font-weight: 400;
+}
+
+.text span {
+  display: block;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+@media (max-width: 992px) {
+  .heading {
+    font-size: 45px;
+    padding: 30px 15px;
+    letter-spacing: 4px;
+  }
+
+  .overlay {
+    font-size: 18px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 32px;
+    padding: 20px 10px;
+    letter-spacing: 3px;
+  }
+
+  .maincard {
+    padding: 40px 15px;
+  }
+
+  .overlay {
+    font-size: 16px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+
+  .overlay {
+    font-size: 14px;
+  }
+}
